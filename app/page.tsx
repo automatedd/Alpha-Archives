@@ -1,5 +1,4 @@
 import CustomSvgIcon from "@/components/customsvg";
-import TypeformIframeDialog from "@/components/TypeformDialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Avatar,
@@ -10,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import CustomVideoPlayer from "@/components/videoplayer";
 import { ArrowUpRight, BadgeCheckIcon, BarChart2Icon, Brain, DollarSign, HandCoins, Megaphone, UserCircle, Zap } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 export default function Home() {
   const reasons = [
@@ -145,7 +145,14 @@ export default function Home() {
         </div>
         <div className="mt-12 mx-auto w-fit">
           <div className="mx-auto w-fit mb-6">
-            <TypeformIframeDialog btnLg />
+            <Link href={"/book-now"} className="py-1 cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
+              <span className="text-lg font-semibold">
+                Work with us
+              </span>
+              <span className="size-12 flex rounded-full bg-white ml-15">
+                <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
+              </span>
+            </Link>
           </div>
           <div className="flex items-center">
             <p className="text-sm">
@@ -230,7 +237,14 @@ export default function Home() {
         </p>
         <div className="mt-18 mx-auto w-fit">
           <div className="mx-auto w-fit mb-6">
-            <TypeformIframeDialog btnLg />
+            <Link href={"/book-now"} className="py-1 cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
+              <span className="text-lg font-semibold">
+                Work with us
+              </span>
+              <span className="size-12 flex rounded-full bg-white ml-15">
+                <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
+              </span>
+            </Link>
           </div>
           <div className="mt-12 w-fit relative z-10 flex items-center justify-center mx-auto mb-10">
             <CustomSvgIcon className="size-12 absolute z-0 opacity-25 -left-[22px]" color="oklch(79.5% 0.184 86.047)" />
@@ -298,9 +312,21 @@ export default function Home() {
           </h1>
         </div>
         <div className="max-w-4xl mx-auto grid grid-cols-3 gap-2 mt-10 md:mt-20">
-          <Image alt="sc-1" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
-          <div className="grid gap-2">
+          <div className="space-y-2">
             <Image alt="sc-1" width={280} height={147} src={"/1nVYGdY.png"} className="border-2 border-yellow-500 rounded-lg" />
+            <Image alt="sc-1" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
+          </div>
+          <div className="grid gap-2">
+            <div className="w-[280px]">
+              <AspectRatio ratio={9 / 16} className="bg-yellow-500 p-0.5 shadow-[0_0_300px_-50px] shadow-amber-500 h-full rounded-lg">
+                <CustomVideoPlayer
+                  src="/alphaarchives1.mp4"
+                  autoPlay={false}
+                  preload="metadata"
+                />
+              </AspectRatio>
+            </div>
+
             <Image alt="sc-1" width={280} height={412} src={"/Wm1D2Tk.png"} className="border-2 border-yellow-500 rounded-lg" />
           </div>
           <Image alt="sc-2" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
@@ -324,7 +350,14 @@ export default function Home() {
           </p>
           <div className="mt-18 mx-auto w-fit">
             <div className="mx-auto w-fit mb-6">
-              <TypeformIframeDialog btnLg />
+              <Link href={"/book-now"} className="py-1 cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
+                <span className="text-lg font-semibold">
+                  Work with us
+                </span>
+                <span className="size-12 flex rounded-full bg-white ml-15">
+                  <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
+                </span>
+              </Link>
             </div>
             <div className="flex items-center mx-auto w-fit">
               <p className="text-sm text-left">
