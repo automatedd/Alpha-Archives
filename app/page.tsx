@@ -97,7 +97,7 @@ export default function Home() {
             </span>
           </span>
           <h1 className="md:text-4xl text-2xl font-semibold mt-8 md:font-bold md:leading-12">
-            Learn How to Print With <span className="text-yellow-500">Crypto & Memecoins</span> By Rugpulling Your Own Coins, Finding 100x Weekly Callouts & Even Becoming a <span className="text-yellow-500">Crypto Influencer!</span>
+            Learn How to Print With <span className="text-yellow-500">Crypto & Memecoins</span> By Launching Your Own Memecoins, Finding 100x Weekly Callouts & Even Becoming a <span className="text-yellow-500">Crypto Influencer!</span>
           </h1>
           <h3 className="mt-8">
             Copy this blueprint and start earning $10K+ A month From Crypto Just like Our other students!
