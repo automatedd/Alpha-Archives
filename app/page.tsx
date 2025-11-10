@@ -1,4 +1,5 @@
 import CustomSvgIcon from "@/components/customsvg";
+import TypeformIframeDialog from "@/components/TypeformDialog";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Avatar,
@@ -143,14 +144,9 @@ export default function Home() {
           </AspectRatio>
         </div>
         <div className="mt-12 mx-auto w-fit">
-          <button className="py-1 mb-6 mx-auto cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
-            <span className="text-lg font-semibold">
-              Work with us
-            </span>
-            <span className="size-12 flex rounded-full bg-white ml-15">
-              <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
-            </span>
-          </button>
+          <div className="mx-auto w-fit mb-6">
+            <TypeformIframeDialog btnLg />
+          </div>
           <div className="flex items-center">
             <p className="text-sm">
               Limited Spots available
@@ -233,14 +229,9 @@ export default function Home() {
           This is not a slow hustle — it’s a parabolic era where attention converts to cash faster than anything else online. If you skip this you’ll be buying screenshots of other people’s Lambo receipts for years. Get in now, learn the playbook, and let the next memecoin wave print your life-changing score.
         </p>
         <div className="mt-18 mx-auto w-fit">
-          <button className="py-1 mb-6 mx-auto cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
-            <span className="text-lg font-semibold">
-              Work with us
-            </span>
-            <span className="size-12 flex rounded-full bg-white ml-15">
-              <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
-            </span>
-          </button>
+          <div className="mx-auto w-fit mb-6">
+            <TypeformIframeDialog btnLg />
+          </div>
           <div className="mt-12 w-fit relative z-10 flex items-center justify-center mx-auto mb-10">
             <CustomSvgIcon className="size-12 absolute z-0 opacity-25 -left-[22px]" color="oklch(79.5% 0.184 86.047)" />
             <p className="text-sm relative z-10">
@@ -332,14 +323,9 @@ export default function Home() {
             This is Your Chance to cash-in on the crypto boom that is making hundreds of smart people financially free. This opportunity won&apos;t last forever. Only 25 spots available in this enrollement period, and the next one isnt until Marrch 2026.
           </p>
           <div className="mt-18 mx-auto w-fit">
-            <button className="py-1 mb-6 mx-auto cursor-pointer group pr-1 pl-6 rounded-full border-2 border-yellow-500 bg-linear-to-r flex items-center from-yellow-500 text-black via-yellow-500 to-yellow-950 shadow-xl shadow-amber-500/30">
-              <span className="text-lg font-semibold">
-                Work with us
-              </span>
-              <span className="size-12 flex rounded-full bg-white ml-15">
-                <ArrowUpRight className="text-yellow-950 m-auto group-hover:translate-x-1 duration-300 group-hover:-translate-y-1" />
-              </span>
-            </button>
+            <div className="mx-auto w-fit mb-6">
+              <TypeformIframeDialog btnLg />
+            </div>
             <div className="flex items-center mx-auto w-fit">
               <p className="text-sm text-left">
                 Limited Spots available
