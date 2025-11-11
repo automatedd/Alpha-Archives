@@ -1,5 +1,6 @@
 'use client'
 
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { FunctionComponent } from "react";
@@ -12,7 +13,7 @@ const ThankHero: FunctionComponent<ThankHeroProps> = ({ className }) => {
     const searchParams = useSearchParams();
     const name = searchParams.get('name');
     return (<>
-        <section id="hero" className="pt-30 md:pt-80 h-screen pb-20 md:px-0 px-5 relative">
+        <section id="hero" className={cn(className, "pt-30 md:pt-80 h-screen pb-20 md:px-0 px-5 relative")}>
             <div className="max-w-xl mx-auto text-center relative">
                 <Image src={"/bnb.svg"} width={28} height={28} alt="bnb" className="absolute md:block hidden opacity-20 left-20 -top-10" />
                 <Image src={"/dingocoin.svg"} width={72} height={72} alt="dingocoin" className="absolute md:block hidden opacity-20 -left-30" />
