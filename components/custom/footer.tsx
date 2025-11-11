@@ -8,10 +8,7 @@ interface FooterProps {
 
 const Footer: FunctionComponent<FooterProps> = ({ className }) => {
     const menus = [
-        { name: "About Us", link: "#" },
-        { name: "Contact Us", link: "#" },
-        { name: "Terms", link: "#" },
-        { name: "Privacy", link: "#" }
+        { name: "Book an Appointment", link: "/book-now" },
     ]
     return (<>
         <footer className={cn("flex pt-10 md:pt-20 flex-col items-center justify-center", className)}>
