@@ -68,9 +68,9 @@ export default function ApplyNow() {
                 </div>
                 <div className="max-w-xl mx-auto border-2 border-yellow-500 rounded-2xl overflow-hidden mt-10 bg-white w-full">
                     <iframe
-                        key={"https://form.typeform.com/to/UdJF2S9y?typeform-medium=embed"} // ensure remount when src changes
+                        key={"https://calendly.com/automatedfans/30min?primary_color=efbf04&hide_event_type_details=1&"} // ensure remount when src changes
                         title={"form"}
-                        src={"https://form.typeform.com/to/UdJF2S9y?typeform-medium=embed"}
+                        src={"https://calendly.com/automatedfans/30min?primary_color=efbf04&hide_event_type_details=1&"}
                         style={{ width: "100%", border: 0 }}
                         className="h-[560px]"
                         allow={"camera; microphone; autoplay; encrypted-media;"}
