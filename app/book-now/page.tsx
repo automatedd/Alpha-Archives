@@ -90,7 +90,7 @@ export default function ApplyNow() {
                 <div className="max-w-4xl mx-auto grid grid-cols-3 gap-2 mt-10 md:mt-20">
                     <div className="space-y-2">
                         <Image alt="sc-1" width={280} height={147} src={"/1nVYGdY.png"} className="border-2 border-yellow-500 rounded-lg" />
-                        <Image alt="sc-1" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
+                        <Image alt="sc-2" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
                     </div>
                     <div className="grid gap-2">
                         <div className="w-[280px]">
@@ -103,9 +103,12 @@ export default function ApplyNow() {
                             </AspectRatio>
                         </div>
 
-                        <Image alt="sc-1" width={280} height={412} src={"/Wm1D2Tk.png"} className="border-2 border-yellow-500 rounded-lg" />
+                        <Image alt="sc-3" width={280} height={412} src={"/Wm1D2Tk.png"} className="border-2 border-yellow-500 rounded-lg" />
                     </div>
-                    <Image alt="sc-2" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
+                    <div className="space-y-2">
+                        <Image alt="sc-4" width={280} height={583} src={"/lMeSrBy.png"} className="border-2 border-yellow-500 rounded-lg" />
+                        <Image alt="sc-4" width={280} height={583} src={"/7DCXf6l.png"} className="border-2 border-yellow-500 rounded-lg" />
+                    </div>
                 </div>
             </section>
         </>
