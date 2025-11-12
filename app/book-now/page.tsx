@@ -87,7 +87,7 @@ export default function ApplyNow() {
                         Are Other People Seeing Success With <span className="text-yellow-500">Alpha Archives?</span>
                     </h1>
                 </div>
-                <div className="max-w-4xl mx-auto grid grid-cols-3 gap-2 mt-10 md:mt-20">
+                <div className="max-w-4xl mx-auto grid md:grid-cols-3 items-center justify-center gap-2 mt-10 md:mt-20">
                     <div className="space-y-2">
                         <Image alt="sc-1" width={280} height={147} src={"/1nVYGdY.png"} className="border-2 border-yellow-500 rounded-lg" />
                         <Image alt="sc-2" width={280} height={583} src={"/jtxMyma.png"} className="border-2 border-yellow-500 rounded-lg" />
