@@ -50,8 +50,6 @@ const schema = z.object({
     occupation: z.string().min(1, 'Occupation required'),
     monthlyIncome: z.enum(MONTHLY_INCOME_OPTIONS),
     willingnessToInvest: z.enum(WILLINGNESS_OPTIONS),
-    message: z.string().optional(),
-    consent: z.boolean().optional(),
 })
 type FormValues = z.infer<typeof schema>
 
@@ -210,8 +208,6 @@ export default function LeadMultiStepForm() {
             monthlyIncome: '1000$-5000$' as any,
             willingnessToInvest:
                 '$1000-$5000 - I am willing to invest a decent bit into actually getting rich with crypto, I have the capital and I am ready to start.' as any,
-            message: '',
-            consent: false,
         },
         mode: 'onTouched',
     })
@@ -326,6 +322,10 @@ export default function LeadMultiStepForm() {
                 return null
             }
             const json = await res.json()
+            if (json.redirect) {
+                window.location.href = json.redirect;
+                return null;
+            }
             if (!res.ok) {
                 toast.error(json?.error ?? 'Failed to submit')
                 return null
@@ -573,18 +573,8 @@ export default function LeadMultiStepForm() {
                         {formState.errors.willingnessToInvest && <p className="text-sm text-red-600">{formState.errors.willingnessToInvest.message}</p>}
                     </div>
 
-                    <div>
-                        <Label htmlFor="message">Message (optional)</Label>
-                        <Textarea id="message" {...register('message')} placeholder="Anything else" />
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                        <input id="consent" type="checkbox" {...register('consent')} />
-                        <Label htmlFor="consent">I agree to be contacted about this offer.</Label>
-                    </div>
-
                     <div className="flex items-center gap-2">
-                        <Button type="submit" disabled={loadingTimes}>{loadingTimes ? 'Checking...' : 'Continue'}</Button>
+                        <Button type="submit" className='bg-yellow-400 text-black hover:bg-yellow-500' disabled={loadingTimes}>{loadingTimes ? 'Checking...' : 'Continue'}</Button>
                     </div>
                 </form>
             )}
@@ -656,8 +646,8 @@ export default function LeadMultiStepForm() {
                                         </fieldset>
 
                                         <div className="flex gap-2 mt-4">
-                                            <Button type="submit" disabled={submitting}>{submitting ? 'Booking...' : 'Book appointment'}</Button>
-                                            <Button variant="ghost" onClick={() => { setStep(1); setAvailableTimes(null); setBookingToken(null); }}>Back</Button>
+                                            <Button type="submit" className='bg-yellow-400 text-black hover:bg-yellow-500' disabled={submitting}>{submitting ? 'Booking...' : 'Book appointment'}</Button>
+                                            <Button variant="outline" onClick={() => { setStep(1); setAvailableTimes(null); setBookingToken(null); }}>Back</Button>
                                         </div>
                                     </form>
                                 )}

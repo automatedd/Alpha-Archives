@@ -35,8 +35,6 @@ const schema = z.object({
     occupation: z.string().min(1),
     monthlyIncome: z.enum(MONTHLY_INCOME_OPTIONS),
     willingnessToInvest: z.enum(WILLINGNESS_OPTIONS),
-    message: z.string().optional(),
-    consent: z.boolean().optional(),
     recaptchaToken: z.string().optional(),
     tz: z.string().optional(),
 })
@@ -165,7 +163,7 @@ export async function POST(req: NextRequest) {
         if (!okCaptcha) return NextResponse.json({ ok: false, error: 'reCAPTCHA verification failed' }, { status: 400 })
 
         if (WILLINGNESS_LOW.has(payload.willingnessToInvest)) {
-            return NextResponse.json({ ok: false, redirect: 'https://www.google.com' }, { status: 500 })
+            return NextResponse.json({ ok: false, redirect: 'https://whop.com/alpha-archive/alphaarchivepremium/' }, { status: 500 })
         }
 
         if (!CALENDLY_EVENT_TYPE_URI) {
