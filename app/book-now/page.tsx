@@ -1,4 +1,6 @@
 import CustomSvgIcon from "@/components/customsvg";
+import LeadForm from "@/components/LeadForm";
+import LeadMultiStepForm from "@/components/LeadFormMultiStep";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
     Avatar,
@@ -66,15 +68,8 @@ export default function ApplyNow() {
                         </div>
                     </div>
                 </div>
-                <div className="max-w-xl mx-auto border-2 border-yellow-500 rounded-2xl overflow-hidden mt-10 bg-white w-full">
-                    <iframe
-                        key={"https://calendly.com/automatedfans/30min?primary_color=efbf04&hide_event_type_details=1&"} // ensure remount when src changes
-                        title={"form"}
-                        src={"https://calendly.com/automatedfans/30min?primary_color=efbf04&hide_event_type_details=1&"}
-                        style={{ width: "100%", border: 0 }}
-                        className="h-[560px]"
-                        allow={"camera; microphone; autoplay; encrypted-media;"}
-                    />
+                <div className="max-w-xl mx-auto border-2 border-yellow-500 rounded-2xl overflow-hidden mt-10 text-black p-8 bg-white w-full">
+                    <LeadMultiStepForm />
                 </div>
 
             </section>
