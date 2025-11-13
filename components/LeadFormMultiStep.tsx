@@ -13,6 +13,7 @@ import { Button } from '@/components/ui/button'
 import { Label } from '@/components/ui/label'
 import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from '@/components/ui/select'
 import { Toaster, toast } from 'sonner'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const RECAPTCHA_SITE_KEY = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? ''
 
@@ -508,7 +509,7 @@ export default function LeadMultiStepForm() {
                             name="based"
                             render={({ field }) => (
                                 <Select value={field.value} onValueChange={(v) => field.onChange(v)}>
-                                    <SelectTrigger>
+                                    <SelectTrigger className='w-full'>
                                         <SelectValue placeholder="Select country or Other" />
                                     </SelectTrigger>
                                     <SelectContent>
@@ -544,9 +545,9 @@ export default function LeadMultiStepForm() {
                             render={({ field }) => (
                                 <div className="flex flex-col gap-2 mt-2">
                                     {MONTHLY_INCOME_OPTIONS.map((opt) => (
-                                        <label key={opt} className="flex items-center gap-2">
+                                        <label key={opt} className="flex items-center hover:bg-accent gap-2 border p-3 rounded-lg w-fit">
                                             <input type="radio" name="monthlyIncome" value={opt} checked={field.value === opt} onChange={() => setValue('monthlyIncome', opt)} />
-                                            <span>{opt}</span>
+                                            <span className='text-sm leading-tight'>{opt}</span>
                                         </label>
                                     ))}
                                 </div>
@@ -562,7 +563,7 @@ export default function LeadMultiStepForm() {
                             render={({ field }) => (
                                 <div className="flex flex-col gap-2 mt-2">
                                     {WILLINGNESS_OPTIONS.map((opt) => (
-                                        <label key={opt} className="flex items-start gap-2">
+                                        <label key={opt} className="flex items-center hover:bg-accent gap-2 border p-3 rounded-lg">
                                             <input type="radio" name="willingnessToInvest" value={opt} checked={field.value === opt} onChange={() => setValue('willingnessToInvest', opt)} />
                                             <span className="text-sm leading-tight">{opt}</span>
                                         </label>
@@ -574,7 +575,7 @@ export default function LeadMultiStepForm() {
                     </div>
 
                     <div className="flex items-center gap-2">
-                        <Button type="submit" className='bg-yellow-400 text-black hover:bg-yellow-500' disabled={loadingTimes}>{loadingTimes ? 'Checking...' : 'Continue'}</Button>
+                        <Button type="submit" className='bg-yellow-400 text-black hover:bg-yellow-500' disabled={loadingTimes}>{loadingTimes ? 'Checking...' : <>Continue <ChevronRight /></>}</Button>
                     </div>
                 </form>
             )}
@@ -587,7 +588,7 @@ export default function LeadMultiStepForm() {
                         <div className="text-sm text-muted-foreground">Timezone: <strong>{tz}</strong></div>
                     </div>
 
-                    <div className="grid grid-cols-7 gap-2">
+                    <div className="grid md:grid-cols-7 gap-2">
                         {next7Days.map((d) => {
                             const hasSlots = (timesByDate[d.key] ?? []).length > 0
                             const isSelected = selectedDateKey === d.key
@@ -599,7 +600,7 @@ export default function LeadMultiStepForm() {
                                     className={[
                                         'p-2 rounded border text-center',
                                         hasSlots ? 'cursor-pointer' : 'opacity-40 cursor-not-allowed',
-                                        isSelected ? 'ring-2 ring-offset-1' : '',
+                                        isSelected ? 'ring-2 ring-offset-1' : 'hover:bg-accent',
                                     ].join(' ')}
                                 >
                                     <div className="text-xs text-muted-foreground">{new Intl.DateTimeFormat(undefined, { timeZone: tz, weekday: 'short' }).format(d.date)}</div>
@@ -626,9 +627,9 @@ export default function LeadMultiStepForm() {
                                         }}
                                         className="grid gap-2"
                                     >
-                                        <fieldset className="grid gap-2">
+                                        <fieldset className="grid md:grid-cols-2 gap-2">
                                             {(timesByDate[selectedDateKey] ?? []).map((iso) => (
-                                                <label key={iso} className="flex items-center gap-3 p-3 border rounded">
+                                                <label key={iso} className="flex items-center hover:bg-accent gap-3 p-3 border rounded">
                                                     <input
                                                         type="radio"
                                                         name="slot"
@@ -639,15 +640,14 @@ export default function LeadMultiStepForm() {
                                                     />
                                                     <div className="text-left">
                                                         <div className="font-medium">{humanizeTime(iso, tz)}</div>
-                                                        <div className="text-xs text-muted-foreground">{iso}</div>
                                                     </div>
                                                 </label>
                                             ))}
                                         </fieldset>
 
                                         <div className="flex gap-2 mt-4">
-                                            <Button type="submit" className='bg-yellow-400 text-black hover:bg-yellow-500' disabled={submitting}>{submitting ? 'Booking...' : 'Book appointment'}</Button>
-                                            <Button variant="outline" onClick={() => { setStep(1); setAvailableTimes(null); setBookingToken(null); }}>Back</Button>
+                                            <Button variant="outline" onClick={() => { setStep(1); setAvailableTimes(null); setBookingToken(null); }}><ChevronLeft />Back</Button>
+                                            <Button type="submit" className='bg-yellow-400 ml-auto text-black hover:bg-yellow-500' disabled={submitting}>{submitting ? 'Booking...' : <>Book appointment <ChevronRight /></>}</Button>
                                         </div>
                                     </form>
                                 )}
