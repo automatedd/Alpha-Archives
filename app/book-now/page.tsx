@@ -91,7 +91,7 @@ export default function ApplyNow() {
                         <div className="w-[280px]">
                             <AspectRatio ratio={9 / 16} className="bg-yellow-500 p-0.5 shadow-[0_0_300px_-50px] shadow-amber-500 h-full rounded-lg">
                                 <CustomVideoPlayer
-                                    src="/alphaarchives1.mp4"
+                                    src="https://44ipipmon3.ufs.sh/f/KD8YXZER3aKNI1qaBsHoA1MkfxjWvGYdc8HgKFPqUrD9i6ep"
                                     autoPlay={false}
                                     preload="metadata"
                                 />

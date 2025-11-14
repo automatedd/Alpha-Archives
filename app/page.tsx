@@ -136,7 +136,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <AspectRatio ratio={16 / 9} className="bg-yellow-500 p-1 shadow-[0_0_300px_-50px] shadow-amber-500 rounded-lg">
             <CustomVideoPlayer
-              src="/video.mp4"
+              src="https://44ipipmon3.ufs.sh/f/KD8YXZER3aKNRp25dLbGWjY3D6m8zEBb7xlUCTMavKuQIw2k"
               poster="/poster.png"
               autoPlay={false}
               preload="metadata"
@@ -320,7 +320,7 @@ export default function Home() {
             <div className="w-[280px]">
               <AspectRatio ratio={9 / 16} className="bg-yellow-500 p-0.5 shadow-[0_0_300px_-50px] shadow-amber-500 h-full rounded-lg">
                 <CustomVideoPlayer
-                  src="/alphaarchives1.mp4"
+                  src="https://44ipipmon3.ufs.sh/f/KD8YXZER3aKNI1qaBsHoA1MkfxjWvGYdc8HgKFPqUrD9i6ep"
                   autoPlay={false}
                   preload="metadata"
                 />
